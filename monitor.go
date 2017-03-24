@@ -17,6 +17,7 @@ func statsHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func initStats() {
+	fmt.Printf("here %+v\n", pConfig.Stats)
 	pLog.Infof("Start monitor on addr %s", pConfig.Stats)
 
 	go func() {

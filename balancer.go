@@ -6,8 +6,9 @@ import (
 	//"fmt"
 	"math/rand"
 	"net"
-	"stathat.com/c/consistent"
 	"time"
+
+	"github.com/pseudocodes/consistent"
 )
 
 // BackendSvr Type

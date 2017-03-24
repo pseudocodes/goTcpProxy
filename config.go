@@ -5,7 +5,8 @@ package main
 import (
 	//"fmt"
 	"io/ioutil"
-	"launchpad.net/goyaml"
+
+	"gopkg.in/yaml.v2"
 )
 
 // ProxyConfig Type
@@ -28,7 +29,7 @@ type LogConfig struct {
 
 func parseConfigFile(filepath string) error {
 	if config, err := ioutil.ReadFile(filepath); err == nil {
-		if err = goyaml.Unmarshal(config, &pConfig); err != nil {
+		if err = yaml.Unmarshal(config, &pConfig); err != nil {
 			return err
 		}
 	} else {

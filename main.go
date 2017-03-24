@@ -5,11 +5,12 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/Sirupsen/logrus"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/Sirupsen/logrus"
 )
 
 var (
@@ -41,7 +42,7 @@ func main() {
 	if parseConfigFile(*configFile) != nil {
 		return
 	}
-
+	fmt.Printf("%+v\n", pConfig)
 	// init logger server
 	initLogger()
 
